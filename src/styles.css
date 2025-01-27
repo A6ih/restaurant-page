@@ -145,4 +145,7 @@ h1 {
 
 #contact-header {
     margin-top: 3rem;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 2rem;
+    padding: 1rem;
 }
