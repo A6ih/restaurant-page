@@ -1,4 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    color: white;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 body, html {
+    position: relative;
     height: 100vh;
     width: 100vw;
     background-color: black;
@@ -7,4 +22,116 @@ body, html {
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    display: grid;
+    grid-template-rows: 70px 1fr 30px;
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #5271ff,
+        0 0 80px #5271ff,
+        0 0 90px #5271ff,
+        0 0 100px #5271ff,
+        0 0 150px #5271ff;
+    }
+    20%, 24%, 55% {       
+      text-shadow: none;
+    }
+}
+
+header {
+    position: sticky;
+    top: 8px;
+    z-index: 1;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+nav > button {
+    padding: 8px 16px;
+    background-color: black;
+    color: white;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 900;
+    border: 2px solid white;
+}
+
+nav > button:hover {
+    animation: flicker 1.5s infinite alternate;
+}
+
+footer {
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#home-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: end;
+    gap: 4rem;
+    padding: 1rem 2rem;
+}
+
+#logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-right: 1rem;
+    background-color: rgba(0,0,0,0.7);
+    padding: 4px 8px;
+}
+
+#logo-container > *{
+    text-align: center;
+    line-height: 1;
+    animation: flicker 1.5s infinite alternate;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+#about-text {
+    width: 33ch;
+    background-color: rgba(0,0,0,0.7);
+    padding: 4px 8px;
+    border-radius: 1rem;
+    text-align: right;
+}
+
+.hours-location-container {
+    border: 2px solid white;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    height: 135px;
+    text-align: center;
+    margin-right: 1rem;
+    width: 300px;
+}
+
+.hours-location-headers {
+    border-bottom: 2px solid white;
+    margin-bottom: 1rem;
+}
+
+.hours-location-container:last-child {
+    animation: none;
+    height: 100px;
 }
