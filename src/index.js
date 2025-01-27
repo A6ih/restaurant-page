@@ -1,5 +1,6 @@
 import "./styles.css"
 import createHomePage from "./home"
+import createContactPage from "./contact"
 
 const bodyContent = document.querySelector("#content");
 const homeBtn = document.querySelector("#home-btn");
@@ -29,6 +30,7 @@ function switchMainContent(event) {
             homeBtn.style.animation = "none";
             contactBtn.style.animation = "flicker 1.5s infinite alternate";
             bodyContent.textContent = "";
+            bodyContent.appendChild(createContactPage());
         break;
     }
 }

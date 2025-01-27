@@ -94,7 +94,8 @@ footer {
     padding: 4px 8px;
 }
 
-#logo-container > *{
+#logo-container > *,
+#contact-header {
     text-align: center;
     line-height: 1;
     animation: flicker 1.5s infinite alternate;
@@ -112,7 +113,8 @@ h1 {
     text-align: right;
 }
 
-.hours-location-container {
+.hours-location-container,
+.contact-container {
     border: 2px solid white;
     padding: 1rem 2rem;
     border-radius: 2rem;
@@ -120,9 +122,11 @@ h1 {
     text-align: center;
     margin-right: 1rem;
     width: 300px;
+    background-color: rgba(0,0,0,0.8);
 }
 
-.hours-location-headers {
+.hours-location-headers,
+.contact-sub-header {
     border-bottom: 2px solid white;
     margin-bottom: 1rem;
 }
@@ -130,4 +134,15 @@ h1 {
 .hours-location-container:last-child {
     animation: none;
     height: 100px;
+}
+
+#contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+#contact-header {
+    margin-top: 3rem;
 }
