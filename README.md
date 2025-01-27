@@ -1,2 +1,2 @@
-# restaurant-page
-Restaurant page made with JavaScript and CSS files only
+# Restaurant page
+Javascript generated restaurant page(styled with CSS)
