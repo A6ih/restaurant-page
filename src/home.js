@@ -7,7 +7,7 @@ export default function createHomePage() {
     const logoHeaderTwo = createElement("h1", "class", "logo-header", "Tale");
     const logoUnderText = createElement("h4", "id", "logo-under-text", "Bar & Restaurant");
     const logoArr = [logoHeaderOne, logoHeaderTwo, logoUnderText ];
-    const aboutText = `Welcome to Tikka Tale a Indian Restaurant established in Kuopio.
+    const aboutText = `Welcome to Tikka Tale an Indian Restaurant established in Kuopio.
     In India, the best way to win hearts is through the stomach,
     and that is what our goal is with Tikka Tale we serve authentic 
     Indian food with best service in the town!`
