@@ -9,26 +9,29 @@ const contactBtn = document.querySelector("#contact-btn");
 const buttons = [homeBtn, menuBtn, contactBtn];
 buttons.forEach(buttons => buttons.addEventListener("click", switchMainContent));
 
+function toggleAnimation(button) {
+    for (let i = 0; i < buttons.length; i++) {
+        if(button === buttons[i].id) {
+            buttons[i].style.animation = "flicker 1.5s infinite alternate";
+        }
+        else {
+            buttons[i].style.animation = "none";
+        }
+    }
+}
+
 function switchMainContent(event) {
     const target = event.target.id;
+    toggleAnimation(target)
     switch(target){
         case "home-btn":
-            menuBtn.style.animation = "none";
-            contactBtn.style.animation = "none";
-            homeBtn.style.animation = "flicker 1.5s infinite alternate";
             bodyContent.textContent = "";
             bodyContent.appendChild(createHomePage());
         break;
         case "menu-btn":
-            contactBtn.style.animation = "none";
-            homeBtn.style.animation = "none";
-            menuBtn.style.animation = "flicker 1.5s infinite alternate";
             bodyContent.textContent = "";
         break;
         case "contact-btn":
-            menuBtn.style.animation = "none";
-            homeBtn.style.animation = "none";
-            contactBtn.style.animation = "flicker 1.5s infinite alternate";
             bodyContent.textContent = "";
             bodyContent.appendChild(createContactPage());
         break;
