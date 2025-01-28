@@ -1,5 +1,6 @@
 import "./styles.css"
 import createHomePage from "./home"
+import createMenu from "./menu";
 import createContactPage from "./contact"
 
 const bodyContent = document.querySelector("#content");
@@ -30,6 +31,7 @@ function switchMainContent(event) {
         break;
         case "menu-btn":
             bodyContent.textContent = "";
+            bodyContent.appendChild(createMenu());
         break;
         case "contact-btn":
             bodyContent.textContent = "";
